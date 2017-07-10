@@ -10,8 +10,11 @@ def generate_tr(name, score):
 tds = [generate_tr(name, score) for name, score in d.iteritems()]
 
 # 新建文件用于保存病历
-newFile = open("name.html", 'w+');
+newFile = open("/Users/dx/Documents/GitHub/SUR/name.html", 'w+');
 print >>newFile,'<table border="1">'
 print >>newFile,'<tr><th>Name</th><th>Score</th><tr>'
 print >>newFile,'\n'.join(tds)
 print >>newFile,'</table>'
+newFile.close()
+
+print "创建完成"
