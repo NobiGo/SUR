@@ -1,2 +1,5 @@
 .idea/
 name.html
+dx.html
+*.html
+.DS_Store
