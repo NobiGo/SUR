@@ -9,7 +9,7 @@ reload(sys)
 sys.setdefaultencoding("utf-8")
 
 # 解决不能读取中文文件名问题
-fileName = u"/Users/dx/Documents/GitHub/SUR/高七七的病历.json"
+fileName=u"/Users/dx/Documents/GitHub/SUR/高七七的病历.json"
 fileContent = open(fileName, "r")
 patientInfo = fileContent.read()
 # 关闭文件
