@@ -1,16 +1,19 @@
 #coding=utf-8
 import json
 import sys
+import os
 import unicodedata
 from collections import OrderedDict
-from JsonToTable_Package import transJsonToHtml
 reload(sys)
 sys.setdefaultencoding("utf-8")
+from JsonToTable_Package import transJsonToHtml
 
-file = "C:\Users\IBM_ADMIN\Documents\GitHub\SUR\高七七的病历.json".decode("utf-8")
-
-destFile = "C:\Users\IBM_ADMIN\Documents\GitHub\SUR".decode("utf-8")
-
-# print  type("C:\Users\IBM_ADMIN\Documents\GitHub\SUR\高七七的病历.json")
-
-transJsonToHtml.createHtmlTable(file, destFile)
+BASE_DIR=os.path.dirname(__file__)
+#获取当前文件夹的绝对路径
+file_path=os.path.join(BASE_DIR,'GAOQIQI.json')
+#获取当前文件夹内的Test_Data文件
+Test_Data=open(file_path,"r")
+#关闭文件
+Test_Data.close()
+#生成表格
+transJsonToHtml.createHtmlTable(file_path,BASE_DIR)
