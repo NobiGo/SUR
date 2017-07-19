@@ -19,6 +19,7 @@ sk.bind(ip_port)
 # 开始TCP监听。backlog指定在拒绝连接之前，操作系统可以挂起的最大连接数量。
 sk.listen(5)
 
+
 i = 0;
 
 def threadProcess(conn,i):
