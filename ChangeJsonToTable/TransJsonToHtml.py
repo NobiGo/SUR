@@ -30,10 +30,12 @@ def generate_tr(name, value):
 
 # 生成html文件
 def geberate_html(destPath, content):
+    print destPath
     keyValue = [generate_tr(name, content[name]) for name in content.keys()]
     # 定义生成表格
     # 新建文件用于保存病历
-    newFile = open(destPath + content[u"姓名"] + ".html", 'w+');
+    print content[u"姓名"]
+    newFile = open(destPath +"/"+content[u"姓名"] + ".html", 'w+');
     print >> newFile, '<table width="800" border="1" align="center" cellpadding="0">'
     print >> newFile, '<center><h1 text-align:center>入院记录</h1></center>'
     print >> newFile, '\n'.join(keyValue)
