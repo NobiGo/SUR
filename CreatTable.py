@@ -6,7 +6,7 @@ import unicodedata
 from collections import OrderedDict
 reload(sys)
 sys.setdefaultencoding("utf-8")
-from JsonToTable_Package import transJsonToHtml
+from ChangeJsonToTable import transJsonToHtml
 
 BASE_DIR=os.path.dirname(__file__)
 #获取当前文件夹的绝对路径
