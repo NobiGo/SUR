@@ -14,7 +14,6 @@ def createHtmlTable(jsonFileName, destPath):
     # 生成html文件
     geberate_html(destPath, content)
 
-
 # 读取Json文件
 def readJsonFile(fileName):
     fileContent = open(fileName, "r")
@@ -25,11 +24,9 @@ def readJsonFile(fileName):
     content = json.loads(patientInfo, encoding="utf-8", object_pairs_hook=OrderedDict)
     return content
 
-
 #  生成表格内容
 def generate_tr(name, value):
     return '<tr><td width="100px">%s</td><td>%s</td></tr>' % (name, value)
-
 
 # 生成html文件
 def geberate_html(destPath, content):
