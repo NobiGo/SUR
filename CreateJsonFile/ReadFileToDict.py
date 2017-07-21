@@ -6,7 +6,7 @@ import unicodedata
 import  collections
 import TransDictToJson
 from collections import OrderedDict
-
+from  WatsonConversation import MessageTools
 
 reload(sys)
 sys.setdefaultencoding("utf-8")
@@ -27,7 +27,25 @@ def ReadFileToDict(name):
         data.strip("\n")
         if data:
             value = data.split("：")
-            dict[value[0]] = value[1].strip()
+            if(value[0]==u"主诉"):
+                dict[value[0]] = value[1].strip()
+                #  print value[1]
+                list = value[1].split("。")
+                setvalue = set()
+                for item in list:
+                    # print unicode(item).encode("utf-8")
+                    # print item.encode("utf-8")
+                    # print  MessageTools.getResult(textFile=item.strip().decode("utf-8"))
+                    value = MessageTools.getResult(textFile=item.strip())
+                    if value:
+                        setvalue.add(value)
+                # print setvalue
+                itemValue = ""
+                for item in setvalue:
+                      itemValue = itemValue+item+"、"
+                dict[u"病情"] = itemValue
+            else:
+                dict[value[0]] = value[1].strip()
         else:
             Flag = False
             patientInfor.close()

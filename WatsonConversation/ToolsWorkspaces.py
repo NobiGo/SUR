@@ -1,6 +1,5 @@
 # coding:utf-8
 import json
-
 import LogID
 
 conversation = LogID.getConversation()
@@ -14,7 +13,7 @@ def get_workspaces_list(conversation = conversation):
     return jsonFile
 
 # 测试
-# get_workspaces_list(LogID.getConversation())
+get_workspaces_list(LogID.getConversation())
 
 # 创建Workspaces列表
 # conversation.create_workspace
@@ -27,8 +26,6 @@ def get_workspace_id(conversation = conversation):
     # print type(workspaces)
     # print workspaces["workspaces"]
     return  workspaces["workspaces"][0]["workspace_id"]
-
-
 
 # 测试
 # print get_workspace_id(conversation)
