@@ -4,5 +4,3 @@
 /病历/*.json
 .gitattributes
 .idea/SUR-master.iml
-AndoridServer/patientFile/
-MonitorDirectory/
