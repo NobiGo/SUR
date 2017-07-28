@@ -13,11 +13,12 @@ sys.setdefaultencoding("utf-8")
 
 
 def ReadFileToDict(name):
-    #获取存储文件夹的相对路径
-    Filepath_Direct = "AndoridServer/patientFile/"
+    # 获取存储文件夹的相对路径
+    Filepath_Direct = "../AndoridServer/patientFile/"
     Filepath = os.path.join(Filepath_Direct,name)
-    #获取当前文件夹内的Test_Data文件
-    patientInfor=open(Filepath,"r")
+    # 获取当前文件夹内的Test_Data文件
+    #print Filepath
+    patientInfor=open(str(Filepath),"r")
     #按行来获取病人信息以及对话内容
     dict = collections.OrderedDict()
     Flag = True
@@ -49,4 +50,6 @@ def ReadFileToDict(name):
         else:
             Flag = False
             patientInfor.close()
+    # for  item in  dict.keys():
+    #     print  item
     TransDictToJson.TransDictToJson(dict)

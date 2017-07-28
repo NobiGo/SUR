@@ -16,9 +16,9 @@ def createHtmlTable(jsonFileName, destPath):
 
 
 
-
 # 读取Json文件
 def readJsonFile(fileName):
+    print fileName
     fileContent = open(fileName, "r")
     patientInfo = fileContent.read()
     # 关闭文件

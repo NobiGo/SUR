@@ -1,7 +1,8 @@
-
-.idea/workspace.xml
-.idea/vcs.xml
-.idea/SUR.iml
-.idea/modules.xml
-.idea/inspectionProfiles/profiles_settings.xml
-AndoridServer/patientFile/*.text
+.idea/*
+/MonitorDirectory/*.html
+/AndoridServer/patientFile/*.text
+/病历/*.json
+.gitattributes
+.idea/SUR-master.iml
+AndoridServer/patientFile/
+MonitorDirectory/
