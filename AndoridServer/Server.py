@@ -11,7 +11,7 @@ tasksize = 10
 threadpool = ThreadPoolExecutor(max_workers=tasksize)
 
 # 指定IP地址和端口号
-ip_port = ('9.234.91.176',8080)
+ip_port = ('9.234.91.176',9000)
 
 sk = socket.socket()
 # 绑定地址（host,port）到套接字

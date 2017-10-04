@@ -33,13 +33,13 @@ def ReadFileToDict(name):
                 #  print value[1]
                 list = value[1].split("。")
                 setvalue = set()
-                for item in list:
-                    # print unicode(item).encode("utf-8")
-                    # print item.encode("utf-8")
-                    # print  MessageTools.getResult(textFile=item.strip().decode("utf-8"))
-                    value = MessageTools.getResult(textFile=item.strip())
-                    if value:
-                        setvalue.add(value)
+                # for item in list:
+                #     # print unicode(item).encode("utf-8")
+                #     # print item.encode("utf-8")
+                #     # print  MessageTools.getResult(textFile=item.strip().decode("utf-8"))
+                #     value = MessageTools.getResult(textFile=item.strip())
+                #     if value:
+                #         setvalue.add(value)
                 # print setvalue
                 itemValue = ""
                 for item in setvalue:
@@ -53,3 +53,4 @@ def ReadFileToDict(name):
     # for  item in  dict.keys():
     #     print  item
     TransDictToJson.TransDictToJson(dict)
+    return dict
